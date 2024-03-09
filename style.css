@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
+
+:root {
+    --primary: #29e9bc;
+    --normal: #ffffff;
+    --black: #13131a;
+    --bg: #0c1013;
+    --danger: #f75842;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+}
+
+/* Universal selector  */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline-offset: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    transition: all 0.5s linear;
+    scroll-behavior: smooth;
+
+}
+
+/* Custom Scroll bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--normal);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--danger);
+}
+
+.window-scroll{
+    background-color:#0c1013f1;
+}
+
+/* Body section */
+
+body {
+    line-height: 1.7;
+    color: var(--normal);
+    background-color: var(--bg);
+    width: 100%;
+    height: 100vh;
+}
+
+/* Navbar Section  */
+
+nav {
+    background-color: var(--black);
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 1000;
+    border-bottom: 0.2rem solid;
+    border-color: var(--primary);
+}
+
+a {
+    color: var(--normal);
+}
+
+.container{
+    padding: 20px;
+}
+
+.nav_container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_container span {
+    color: var(--primary);
+}
+
+.nav_container h1 {
+    font-size: 1.8rem;
+}
+
+.nav_container h1::first-letter {
+    font-size: 2rem;
+}
+
+.nav_container h1:hover {
+    color: var(--primary);
+    transform: rotateX(360deg);
+    transition-duration: 1.2s;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav_menu a {
+    font-size: 1rem;
+}
+
+.nav_menu a:hover {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 0.8rem;
+    background-color: var(--black);
+}
+
+/* Slider Section  */
+
+img {
+    width: 100%;
+    height: 850px;
+    padding-top: 100px;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #29e9bc ;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Button hover effect */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Header Section  */
+
+.main{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.main .main_left{
+    width: 1700px;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 70px;
+}
+
+.main .main_right .ad_img{
+    width: 300px;
+    height: 300px;
+    justify-content: end;
+    align-items: end;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.sub_main{
+    display: flex;
+    gap: 10px;
+    /* justify-content: space-between; */
+}
+
+.blog {
+    display: flex;
+    gap: 100px;
+    position: relative;
+    align-items: center;
+} 
+
+.blog_pic .blog-img {
+    width: 400px;
+    height: 400px;
+}
+
+.blog_title{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.images{
+    display:flex ;
+    position:relative;
+    width: 1000px;
+}
+.images .img_1 {
+    width: 300px;
+    height: 400px;
+}
+
+.images .img_2 {
+    width: 300px;
+    height: 400px;
+}
+
+.images .img_3 {
+    width: 300px;
+    height: 400px;
+}
+
+.button{
+    height: 15 px;
+    width: 10 px;
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--black);
+    padding: 0.5rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: var(--primary);
+}
+
+.maid_btn{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding:0 10px 0 10px;
+}
+
+.sm-button{
+    height: 15 px;
+    width: 10 px;
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--black);
+    padding: 0.5rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 50px 0 10px 390px;
+}
+
+.sm-button:hover {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: var(--primary);
+}
+
+/* About Section  */
+
+.container_about {
+    background-image: url("https://e7.pngegg.com/pngimages/672/957/png-clipart-woman-wearing-blue-apron-maid-service-cleaner-cleaning-housekeeping-maid-miscellaneous-service-thumbnail.png");
+    background-size:cover ;
+    background-position:center ;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg);
+    text-align: left;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.about_container {
+    display: grid;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    position: absolute;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* Login Section Start Here  */
+
+.login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    text-align: center;
+    margin: 450px 0 0 800px;
+    position: relative;
+    margin-bottom: 500px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    margin-top: 10px;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--danger);
+}
+
+
+/* Footer Section  */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    /* text-align: center; */
+}
+
+.ftr{
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: var(--primary);
+}
+
+.social-icons {
+    text-align: right;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.social-icons i:hover {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: var(--primary);
+}
